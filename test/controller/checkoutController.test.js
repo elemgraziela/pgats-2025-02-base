@@ -6,7 +6,7 @@ const app = require('../../rest/app');
 
 describe('Checkout Controller', () => {
     describe('POST /api/checkout', () => {
-        it('Token inválido o retorno é 401', async () => {
+        it('Token inválido', async () => {
             const res = await request(app)
                 .post('/api/checkout')
                 .set('Authorization', 'Bearer token_invalido')
